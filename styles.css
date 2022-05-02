@@ -1,39 +1,44 @@
 body{
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
     margin: 50px auto;
-    width: 50vw;   
-    background-color: rgb(11, 188, 26, 0.1);     
+    width: 70vw;   
+    background-color: rgba(144, 188, 11, 0.1);     
 }
 #container{
     width: 100%;
     height: 110px; 
 }
 .container-button{        
-    margin: 0;
-    padding: 10px;
+    margin: 0;    
     display: flex;
     justify-content: space-between;
+
 }
 #input{
     width: 60%;    
-    border: 2px solid rgb(11, 188, 26, 0.5);
-    border-radius: 10px;
-    background-color: rgb(11, 188, 26, 0.2);
+    background-color: rgb(255, 255, 0, 0.35);
+    border-radius: 20px;
+    border: 2px solid rgba(15, 15, 15, 0.4); 
     padding: 10px;
-}
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    height: 40px;
 
-#button{
-    padding: 10px;
-    font-size: 15px;
-    width: 30%;    
-    border: 2px solid rgb(11, 188, 26, 0.5); 
-    border-radius: 10px;
-    background-color: rgb(11, 188, 26, 0.2);
 }
-#button:hover{    
-    border: 2px solid rgb(11, 188, 26, 0.5);
-    border-radius: 10px;
-    background-color: rgb(11, 188, 26, 0.5);
+#button{  
+    padding: 10px;
+    font-size: 18px;
+    line-height: 1.2;
+    font-family: 'Montserrat', sans-serif;
+    width: 35%;  
+    border-radius: 20px;
+    background-color: rgb(106, 167, 14); 
+    border: 2px solid rgba(15, 15, 15, 0.4);    
     color: #FFF;
+    
 }
 #todo-list {
     list-style-type: none;
@@ -41,9 +46,9 @@ body{
     padding: 0;
     width: 100%;    
     height: 70vh;
-    border: 2px solid rgb(11, 188, 26, 0.5);
-    border-radius: 10px;
-    background-color: rgb(11, 188, 26, 0.2);
+    border: 2px solid rgba(15, 15, 15, 0.4);  
+    border-radius: 20px;
+    background-color: rgb(255, 255, 0, 0.35);
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start; 
@@ -51,16 +56,41 @@ body{
     overflow-y: auto;
     
 }
-li{
+.items{
     padding: 10px;
     font-size: 20px;
-    width: 25%;
-    border: 1px solid rgb(11, 188, 26, 0.4);
+    width: 20%;
+    border: 2px solid rgba(15, 15, 15, 0.2);
     border-radius: 10px;
     margin: 10px;
     height: 10vh;
-    overflow-y: auto;
-   
+    overflow-y: auto;      
+    background-color: yellow;
+    position: relative;
+}
+.items::after{
+    content: '\f00d';
+    z-index: 2;
+    position: absolute;
+    top: 10px; 
+    right: 10px;  
+    font-family: FontAwesome;
+    font-size: 20px; 
+    color:rgba(15, 15, 15, 0.413); 
+    
+}
+.delete{
+    width: 12px;
+    height: 15px;    
+    z-index: 5;
+    position: absolute;
+    top: 13px;
+    right: 10px;
+}
+.green{
+    background-color: rgb(106, 167, 14); 
+    border: 2px solid rgba(15, 15, 15, 0.413);    
+    color: #FFF;
 }
 .alert{
     color: rgb(242, 10, 10);
@@ -68,3 +98,12 @@ li{
     font-size: 20px;
     font-weight: 800;   
 }
+
+
+
+
+
+
+
+
+
